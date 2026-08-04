@@ -44,12 +44,12 @@
   right: 6px;
 }
 
-.todoapp__card::after {
+/* .todoapp__card::after {
   bottom: -12px;
   left: 12px;
   right: 12px;
   z-index: -1;
-}
+} */
 
 /* New task form */
 .new-task-form {
