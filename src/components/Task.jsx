@@ -1,4 +1,7 @@
-function Task({ title, completed, isEditing }) {
+import  { useState } from 'react';
+function Task({ title, completed}) {
+  const [isEditing, setIsEditing] = useState(false);
+
   if (isEditing) {
     return (
       <li className="task task--editing">
@@ -12,7 +15,9 @@ function Task({ title, completed, isEditing }) {
       <button className="task__toggle" />
       <span className="task__title">{title}</span>
       <div className="task__actions">
-        <button className="task__edit">✎</button>
+        <button className="task__edit" onClick={() => setIsEditing(true)}>
+          ✎
+        </button>
         <button className="task__delete">✕</button>
       </div>
     </li>
