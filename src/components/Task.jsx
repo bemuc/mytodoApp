@@ -24,7 +24,7 @@ function Task({ title, completed, onToggle, onDelete, onEdit }) {
       <li className="task task--editing">
         <input className="task__edit-input" 
         type="text" 
-        value={title}
+        value={editValue}
         onChange = {(e) => setEditValue(e.target.value)}
         onKeyDown = {handleKeyDown}
         autoFocus 
