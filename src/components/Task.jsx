@@ -24,10 +24,10 @@ function Task({ title, completed, onToggle, onDelete, onEdit }) {
       <li className="task task--editing">
         <input className="task__edit-input" 
         type="text" 
-        Value={title}
+        vlue={title}
         onChange = {(e) => setEditValue(e.target.value)}
         onKeyDown = {handleKeyDown}
-        autofocus 
+        autoFocus 
 
         />
       </li>
@@ -36,7 +36,7 @@ function Task({ title, completed, onToggle, onDelete, onEdit }) {
 
   return (
     <li className={`task ${completed ? 'task--completed' : ''}`}>
-      <button className="task__toggle" />
+      <button className="task__toggle" onClick = {onToggle} />
       <span className="task__title">{title}</span>
       <div className="task__actions">
         <button className="task__edit" onClick={startEditing}>✎</button>

@@ -1,6 +1,6 @@
 import Task from './Task';
 
-function TaskList({ tasks }) {
+function TaskList({ tasks, onToggle, onDelete, onEdit }) {
   return (
     <ul className="task-list">
       {tasks.map((task) => (

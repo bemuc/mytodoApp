@@ -4,14 +4,14 @@ import TaskList from './components/TaskList';
 import Footer from './components/Footer';
 import './App.css'
 
-const tasks = [
+const initialTasks = [
   { id: 1, title: 'Completed task', completed: true },
   { id: 2, title: 'Editing task', completed: true },
   { id: 3, title: 'Active task', completed: false },
 ];
 
 function App() {
-  const[tasks, setTasks] = useState(tasks);
+  const[tasks, setTasks] = useState(initialTasks);
 
   function toggleTask(id){
     setTasks(tasks.map((task) =>
