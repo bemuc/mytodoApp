@@ -4,7 +4,12 @@ function TaskList({ tasks }) {
   return (
     <ul className="task-list">
       {tasks.map((task) => (
-        <Task key={task.id} {...task} />
+        <Task key={task.id} 
+        {...task}
+        onToggle = {() => onToggle(task.id)}
+        onDelete = {() => onDelete(task.id)}
+        onEdit = {(newTitle) => onEdit(task.id, newTitle)}
+         />
       ))}
     </ul>
   );
